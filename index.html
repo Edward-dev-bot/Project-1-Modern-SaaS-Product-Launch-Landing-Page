@@ -5,7 +5,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>landing page</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+nav {
+    padding: 30px 0px 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*responsive navigation*/
+.nav-items {
+    /*Positioning*/
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    /*Design*/
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 50px;
+
+}
+
+.nav-items ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    gap: 20px;
+    padding: 20px
+}
+
+.nav-items ul a {
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    font-size: medium;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-items ul a:hover {
+    opacity: 0.5;
+}
+
+.learn-more-btn {
+    background-color: rgba(72, 92, 17, 1);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* 2. Flexbox alignment to keep text and arrow inline */
+    display: inline-flex;
+    align-items: center;
+}
+
+.learn-more-btn:hover {
+    background-color: rgba(72, 92, 17, 0.7);
+}
+
+.learn-more-btn .arrow {
+    display: inline-block;/* Crucial: transforms do not work on default inline spans */
+    font-size: 16px;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.learn-more-btn:hover .arrow {
+    transform: translateY(-6px);
+}
+        </style>
 </head>
 
 <body>
